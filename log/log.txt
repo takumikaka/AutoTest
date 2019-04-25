@@ -1,0 +1,4 @@
+[2019-04-25 10:22:48] INFO [rfile: iofile.py 24] file data is: test
+[2019-04-25 10:22:48] INFO [<module>: iofile.py 30] Complete Done!
+[2019-04-25 10:24:53] INFO [rfile: iofile.py 24] file data is: test
+[2019-04-25 10:24:53] INFO [<module>: iofile.py 30] Complete Done!
