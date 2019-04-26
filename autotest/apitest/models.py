@@ -19,7 +19,7 @@ class Apitest(models.Model):
         return self.apitestname
 
 class Apistep(models.Model):
-    Apitest = models.ForeignKey(Apitest, on_delete = models.CASCADE, )
+    Apitest = models.ForeignKey("Apitest", on_delete = models.CASCADE, )
     apiname = models.CharField("Interface_name", max_length = 100)
     apiurl = models.CharField("URL_Address", max_length = 200)
     apistep = models.CharField("Test_Procedure", max_length = 100, null = True)
