@@ -33,3 +33,21 @@ class Apistep(models.Model):
 
     def __str__(self):
         return self.apistep
+
+class Apis(models.Model):
+    Product = models.ForeignKey("product.Product", on_delete = models.CASCADE, null = True)
+    apiname = models.CharField("Interface_name", max_length = 100)
+    apiurl = models.CharField("URL_Address", max_length = 200)
+    apiparamvalue = models.CharField("Request_Parameters_and_Values", max_length = 800)
+    REQUEST_METHOD = (("0", "get"), ("1", "post"), ("2", "put"), ("3", "delete"), ("4", "patch"))
+    apimethod = models.CharField(verbose_name = "Request_Method", choices = REQUEST_METHOD, default = "0", max_length = 200)
+    apiresult = models.CharField("Expected_Results", max_length = 200)
+    apistatus = models.BooleanField("Whether_to_Pass")
+    create_time = models.DateTimeField("Create_Time", auto_now = True)
+
+    class Meta:
+        verbose_name = "Single_Scene_Interface"
+        verbose_name_plural = "Single_Scene_Interface"
+
+    def __str__(self):
+        return self.apiname
