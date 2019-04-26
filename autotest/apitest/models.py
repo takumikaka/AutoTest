@@ -32,4 +32,4 @@ class Apistep(models.Model):
     create_time = models.DateTimeField("Create_Time", auto_now = True)
 
     def __str__(self):
-        return self.name
+        return self.apistep
