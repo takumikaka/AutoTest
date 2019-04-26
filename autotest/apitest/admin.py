@@ -9,7 +9,7 @@ class ApistepAdmin(admin.TabularInline):
     extra = 1
 
 class ApitestAdmin(admin.ModelAdmin):
-    list_display = ["apitestname", "apitester", "apitestresult", "create_time"]
+    list_display = ["apitestname", "apitester", "apitestresult", "create_time", "id"]
     inlines = [ApistepAdmin]
 
-admin.site.register(Apistep, ApitestAdmin)
+admin.site.register(Apitest, ApitestAdmin)
